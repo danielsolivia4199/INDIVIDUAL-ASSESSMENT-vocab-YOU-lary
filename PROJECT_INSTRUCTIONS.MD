@@ -13,7 +13,7 @@ In this student assessment, you will be creating an application that allows user
 - Promises 
 
 ## REMINDER
-We are not looking for completion of all stretch goals, but are focused on you hitting MVP, although if you can make it work completely, then wahoo!
+We are not looking for completion of all stretch goals, but are focused on you hitting MVP, although if you can make it work completely, then   wahoo!
 
 What we are looking for is MVP, time management, critical thinking about the concepts, creative thinking to bind the concepts together for a solution, and collaboration with your teammates and instruction team.
 
