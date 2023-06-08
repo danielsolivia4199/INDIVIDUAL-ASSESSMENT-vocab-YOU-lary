@@ -15,7 +15,7 @@ const addCardForm = (obj = {}) => {
       </div>
       <div class="form-group">
       <label for="definition">Definition of Vocabulary Term</label>
-      <input type="text" class="form-control" id="category" placeholder="Enter Category" value="${obj.category || ''}" required>
+      <input type="text" class="form-control" id="language" placeholder="Enter Language" value="${obj.language || ''}" required>
     </div>
       <button type="submit" class="btn btn-primary">Submit Vocabulary Card
       </button>

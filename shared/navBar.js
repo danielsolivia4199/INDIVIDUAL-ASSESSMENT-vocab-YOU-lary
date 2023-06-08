@@ -22,13 +22,13 @@ const navBar = () => {
             <a class="nav-link" href="#" id="python-cards">Python</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" id="django-cards">Djange</a>
+            <a class="nav-link" href="#" id="java-cards">Java</a>
           </li>
           <li>
           <input
             class="form-control mr-sm-2"
             id="search"
-            placeholder="Search Vocabulary Word"
+            placeholder="Search Vocabulary Term"
             aria-label="Search"
           />
           </li>

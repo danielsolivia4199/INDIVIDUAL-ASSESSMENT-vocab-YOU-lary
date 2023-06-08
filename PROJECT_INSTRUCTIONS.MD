@@ -33,15 +33,15 @@ Make sure your Developer Tools are open at all times while working on this proje
 
 ## Get Started
 Create issue tickets from the items below to help you get started. 
-- [ ] Setup your firebase project and create the `.env` file with your keys. (Reference the [Firebase videos](https://vimeo.com/showcase/codetracker-firebase) if you need help getting started)
+- [x] Setup your firebase project and create the `.env` file with your keys. (Reference the [Firebase videos](https://vimeo.com/showcase/codetracker-firebase) if you need help getting started)
 - [ ] Plan your project. Take no more than an hour to plan (ERD, Flow Chart, Postman)
-- [ ] `git clone YOUR_GITHUB_REPO_LINK`
-- [ ] `cd` into the directory
-- [ ] Run `npm install` to install your dependencies
-- [ ] Type `code .` to open the project in VS Code
-- [ ] `npm start` to start your server
-- [ ] Plan your project by creating the tickets you will work through using Github Projects
-- [ ] START CODING!
+- [x] `git clone YOUR_GITHUB_REPO_LINK`
+- [x] `cd` into the directory
+- [x] Run `npm install` to install your dependencies
+- [x] Type `code .` to open the project in VS Code
+- [x] `npm start` to start your server
+- [x] Plan your project by creating the tickets you will work through using Github Projects
+- [x] START CODING!
 
 # MVP Requirements
 [MVP Wireframe](https://www.figma.com/file/IW4jF3GnzCFLYbEXlgFNIZ/MVP)
@@ -55,17 +55,17 @@ Create issue tickets from the items below to help you get started.
   - [ ] Any other options you would like to add
 
 **The most basic requirement for this project is that a user can:**
-- [ ] Login and Logout of the application using Firebase Google Authentication
-- [ ] only see the vocabulary entries that they created
-- [ ] CREATE a vocabulary entry:
-  - [ ] Title
-  - [ ] Definition
-  - [ ] Language/Tech
-  - [ ] Time submitted - Not on form. Handle in your JS
-  - [ ] user ID - Not on form. Pull from User object.
-- [ ] READ THIER entries
-- [ ] UPDATE THEIR entries
-- [ ] DELETE THEIR entries
+- [x] Login and Logout of the application using Firebase Google Authentication
+- [x] only see the vocabulary entries that they created
+- [x] CREATE a vocabulary entry:
+  - [x] Title
+  - [x] Definition
+  - [x] Language/Tech
+  - [x] Time submitted - Not on form. Handle in your JS
+  - [x] user ID - Not on form. Pull from User object.
+- [x] READ THIER entries
+- [x] UPDATE THEIR entries
+- [x] DELETE THEIR entries
 - [ ] Filter by language/tech
 - [ ] Style your application using your own creativity!
 - [ ] No errors - linters should be clean

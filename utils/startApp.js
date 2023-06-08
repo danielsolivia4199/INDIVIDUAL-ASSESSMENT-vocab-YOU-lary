@@ -10,9 +10,9 @@ const startApp = (user) => {
   domBuilder(user);
   domEvents(user);
   formEvents(user);
-  logoutButton();
   navBar();
   deleteCard();
+  logoutButton();
 
   getCards(user.uid).then((cards) => showCards(cards));
 };

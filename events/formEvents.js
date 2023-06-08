@@ -9,7 +9,7 @@ const formEvents = (user) => {
       const payload = {
         term: document.querySelector('#term').value,
         definition: document.querySelector('#definition').value,
-        category: document.querySelector('#category').value,
+        language: document.querySelector('#language').value,
         uid: user.uid
       };
 
@@ -28,7 +28,7 @@ const formEvents = (user) => {
       const payload = {
         term: document.querySelector('#term').value,
         definition: document.querySelector('#definition').value,
-        category: document.querySelector('#category').value,
+        language: document.querySelector('#language').value,
         firebaseKey,
       };
 
