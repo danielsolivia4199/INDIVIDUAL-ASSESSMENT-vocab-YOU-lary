@@ -14,14 +14,9 @@ const addCardForm = (obj = {}) => {
         <input type="text" class="form-control" id="definition" placeholder="Enter Definition" value="${obj.definition || ''}" required>
       </div>
       <div class="form-group">
-        <select class="custom-select" required>
-          <option value="">Open this select menu</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
-        </select>
-        <div class="invalid-feedback">Example invalid custom select feedback</div>
-      </div>
+      <label for="definition">Definition of Vocabulary Term</label>
+      <input type="text" class="form-control" id="category" placeholder="Enter Category" value="${obj.category || ''}" required>
+    </div>
       <button type="submit" class="btn btn-primary">Submit Vocabulary Card
       </button>
     </form>`;
