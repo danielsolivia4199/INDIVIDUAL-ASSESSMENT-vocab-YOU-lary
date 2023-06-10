@@ -2,7 +2,7 @@ import renderToDOM from '../utils/renderToDOM';
 
 const navBar = () => {
   const domString = `
-  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark mb-5">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark style= bg-black mb-5">
   <div class="container-fluid">
       <a class="navbar-brand title" href="#">Code Words</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,18 +34,20 @@ const navBar = () => {
           <li>
           <input
             class="form-control mr-sm-2"
-            id="search"
+            id="search" style="background-color: black; -webkit-text-fill-color: white;"
             placeholder="Search Vocabulary Term"
-            aria-label="Search"
-          />
+            aria-label="Search"/>
           </li>
+            <button class="btn btn-success" type="button" id="alphabet">
+            Sort A-Z
+            </button>
         </ul>
         <span class="navbar-text">
           <div id="logout-button"></div>
         </span>
       </div>
-      </div>
-    </nav>
+    </div>
+  </nav>
 `;
 
   renderToDOM('#navigation', domString);

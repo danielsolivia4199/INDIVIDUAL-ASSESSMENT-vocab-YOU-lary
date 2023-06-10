@@ -1,10 +1,60 @@
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
 @import "~bootstrap/scss/bootstrap";
-
+@import url('https://fonts.googleapis.com/css?family=Tomorrow:400,700|specimen:100,300,400');
 
 body {
-  background-color: antiquewhite;
-  color: brown;
+  background-color: black;
+  color: white;
   text-align: center;
   margin-top: 100px;
+  font-family: 'Tomorrow', specimen;
+}
+
+img {
+  margin-top: 30px;
+  -webkit-filter: invert(1);
+  filter: invert(1);
+  }
+
+#cards {
+  background-color: black;
+  border: 1px white solid;
+  -webkit-text-fill-color: white;
+}
+
+#alphabet {
+  margin-left: 15px;
+}
+
+#store {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  gap: 15px;
+}
+
+#form-container {
+  background-color: black;
+  color: green;
+}
+
+#definition,#term {
+  background-color: black;
+  -webkit-text-fill-color: white;
+  width: 500px;
+  display:inline;
+  text-align: center;
+  margin-top: 20px;
+}
+#languageFilter {
+  margin-top: 20px;
+}
+
+#submitbtn {
+  margin-top: 30px;
+}
+
+#add-card-btn{
+  -webkit-text-fill-color: white;
 }

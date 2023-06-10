@@ -1,5 +1,6 @@
 import { getCards, createCard, updateCard } from '../api/cardData';
 import { showCards } from '../pages/cards';
+import timeStamp from '../utils/timeStamp';
 
 const formEvents = (user) => {
   document.querySelector('#main-container').addEventListener('submit', (e) => {
@@ -10,6 +11,7 @@ const formEvents = (user) => {
         term: document.querySelector('#term').value,
         definition: document.querySelector('#definition').value,
         language: document.querySelector('#languageFilter').value,
+        time: timeStamp,
         uid: user.uid
       };
 
@@ -29,6 +31,7 @@ const formEvents = (user) => {
         term: document.querySelector('#term').value,
         definition: document.querySelector('#definition').value,
         language: document.querySelector('#languageFilter').value,
+        time: timeStamp,
         uid: user.uid,
         firebaseKey,
       };

@@ -122,6 +122,61 @@ const getCSS = (uid) => new Promise((resolve, reject) => {
     })
     .catch(reject);
 });
+// sort old to new
+const sortOld = (uid) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/cards.json?orderBy="uid"&equalTo="${uid}"`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      const old = Object.values(data).sort((a, b) => {
+        if (a.timestamp > b.timestamp) return -1;
+        return 0;
+      });
+      resolve(old);
+    })
+    .catch(reject);
+});
+// sort new to old
+const sortNew = (uid) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/cards.json?orderBy="uid"&equalTo="${uid}"`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      const newest = Object.values(data).sort((a, b) => {
+        if (a.timeStamp < b.timeStamp) return -1;
+        return 0;
+      });
+      resolve(newest);
+    })
+    .catch(reject);
+});
+// sort a to z
+const sortAZ = (uid) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/cards.json?orderBy="uid"&equalTo="${uid}"`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      const alphabet = Object.values(data).sort((a, b) => {
+        if (a.term.toLowerCase() < b.term.toLowerCase()) return -1;
+        if (a.term.toLowerCase() > b.term.toLowerCase()) return +1;
+        return 0;
+      });
+      resolve(alphabet);
+    })
+    .catch(reject);
+});
 
 export {
   getCards,
@@ -131,5 +186,8 @@ export {
   getSingleCard,
   getJavaScript,
   getHTML,
-  getCSS
+  getCSS,
+  sortOld,
+  sortNew,
+  sortAZ
 };
