@@ -1,4 +1,6 @@
-import { deleteCard, getCards, getSingleCard } from '../api/cardData';
+import {
+  deleteCard, getCards, getSingleCard
+} from '../api/cardData';
 import addCardForm from '../forms/addCardForm';
 import { showCards } from '../pages/cards';
 
@@ -20,7 +22,7 @@ const domEvents = (user) => {
     if (e.target.id.includes('add-card-btn')) {
       addCardForm({}, user);
     }
-
+    // click event for editing card
     if (e.target.id.includes('edit-card-btn')) {
       const [, firebaseKey] = e.target.id.split('--');
 

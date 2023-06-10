@@ -34,7 +34,7 @@ const deleteCard = (firebaseKey) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-// Create Book
+// Create Card
 const createCard = (payload) => new Promise((resolve, reject) => {
   fetch(`${endpoint}/cards.json`, {
     method: 'POST',
@@ -75,10 +75,61 @@ const getSingleCard = (firebaseKey) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+// Get JS cards
+const getJavaScript = (uid) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/cards.json?orderBy="uid"&equalTo="${uid}"`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      const JS = Object.values(data).filter((card) => card.language === 'JavaScript');
+      resolve(JS);
+    })
+    .catch(reject);
+});
+
+// Get HTML cards
+const getHTML = (uid) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/cards.json?orderBy="uid"&equalTo="${uid}"`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      const HTML = Object.values(data).filter((card) => card.language === 'HTML');
+      resolve(HTML);
+    })
+    .catch(reject);
+});
+
+// Get CSS cards
+const getCSS = (uid) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/cards.json?orderBy="uid"&equalTo="${uid}"`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      const CSS = Object.values(data).filter((card) => card.language === 'CSS');
+      resolve(CSS);
+    })
+    .catch(reject);
+});
+
 export {
   getCards,
   deleteCard,
   createCard,
   updateCard,
-  getSingleCard
+  getSingleCard,
+  getJavaScript,
+  getHTML,
+  getCSS
 };

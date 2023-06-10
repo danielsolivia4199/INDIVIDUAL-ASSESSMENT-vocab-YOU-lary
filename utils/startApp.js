@@ -5,12 +5,14 @@ import { showCards } from '../pages/cards';
 import { getCards, deleteCard } from '../api/cardData';
 import domEvents from '../events/domEvents';
 import formEvents from '../events/formEvents';
+import navigationEvents from '../events/navigationEvents';
 
 const startApp = (user) => {
   domBuilder(user);
   domEvents(user);
   formEvents(user);
-  navBar();
+  navBar(user);
+  navigationEvents(user);
   deleteCard();
   logoutButton();
 

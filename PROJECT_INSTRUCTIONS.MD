@@ -46,13 +46,13 @@ Create issue tickets from the items below to help you get started.
 # MVP Requirements
 [MVP Wireframe](https://www.figma.com/file/IW4jF3GnzCFLYbEXlgFNIZ/MVP)
 - [ ] An ERD of your data
-- [ ] Use Firebase for DB and authentication
+- [x] Use Firebase for DB and authentication
 - [ ] Technical Flow chart (timebox this)
-- [ ] The app has a navigation bar that includes:
-  - [ ] A Title/Logo (do not spend a ton of time on this until you reach MVP)
-  - [ ] Logout button
-  - [ ] Create Entry
-  - [ ] Any other options you would like to add
+- [x] The app has a navigation bar that includes:
+  - [x] A Title/Logo (do not spend a ton of time on this until you reach MVP)
+  - [x] Logout button
+  - [x] Create Entry
+  - [x] Any other options you would like to add
 
 **The most basic requirement for this project is that a user can:**
 - [x] Login and Logout of the application using Firebase Google Authentication
@@ -66,7 +66,7 @@ Create issue tickets from the items below to help you get started.
 - [x] READ THIER entries
 - [x] UPDATE THEIR entries
 - [x] DELETE THEIR entries
-- [ ] Filter by language/tech
+- [x] Filter by language/tech
 - [ ] Style your application using your own creativity!
 - [ ] No errors - linters should be clean
 
