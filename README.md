@@ -30,6 +30,8 @@ More Features of navigation bar:
 
     Delete button: Allows user to delete card off of the site. 
 
+Loom Video: https://www.loom.com/share/5198e5a7f4b0404e9cc48d35e00ab972
+
 # Technologies Used
 
 Frontend: HTML, CSS, JavaScript
@@ -63,7 +65,7 @@ Backend: Firebase (Google Authentication, Realtime Database), Postman
 ### Planning
 - Webpack template setup steps
 - dbdiagram.io or something similar for creating your ERD
-- Figma, google slides, or paper for flow charting your application
+- Figma, google slides, or paper for flow charting your application (IMG_3019.heic) 
 - Github issues/milestones for planning out work
 ### Including Images with Webpack
 If you have a folder of local images that you want to load into your code things get a little strange with webpack.  Remember the only way webpack knows about assets is if they are imported into your javascript files.  Even our CSS is not added until those files are imported into our javascript files.  Below is some sample code for how to load a local image file into your project
