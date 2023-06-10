@@ -75,6 +75,8 @@ const getSingleCard = (firebaseKey) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+// one function for all languages
+
 // Get JS cards
 const getJavaScript = (uid) => new Promise((resolve, reject) => {
   fetch(`${endpoint}/cards.json?orderBy="uid"&equalTo="${uid}"`, {
@@ -122,42 +124,6 @@ const getCSS = (uid) => new Promise((resolve, reject) => {
     })
     .catch(reject);
 });
-// sort old to new
-const sortOld = (uid) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/cards.json?orderBy="uid"&equalTo="${uid}"`, {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      const old = Object.values(data).sort((a, b) => {
-        if (a.timestamp > b.timestamp) return -1;
-        return 0;
-      });
-      resolve(old);
-    })
-    .catch(reject);
-});
-// sort new to old
-const sortNew = (uid) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/cards.json?orderBy="uid"&equalTo="${uid}"`, {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      const newest = Object.values(data).sort((a, b) => {
-        if (a.timeStamp < b.timeStamp) return -1;
-        return 0;
-      });
-      resolve(newest);
-    })
-    .catch(reject);
-});
 // sort a to z
 const sortAZ = (uid) => new Promise((resolve, reject) => {
   fetch(`${endpoint}/cards.json?orderBy="uid"&equalTo="${uid}"`, {
@@ -187,7 +153,5 @@ export {
   getJavaScript,
   getHTML,
   getCSS,
-  sortOld,
-  sortNew,
   sortAZ
 };

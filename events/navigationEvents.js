@@ -27,18 +27,24 @@ const navigationEvents = (user) => {
   });
 
   // STRETCH Search bar
+  // event listener funcion triggered on keyup event in the input field
   const search = (event) => {
+    // retrieves the current value of the input field, converts to lower case, and removes leading/trailing whitespace
     const listener = event.target.value.toLowerCase().trim();
+    // retrieves the card data for the user and performs filtering based on the search term
     getCards(user.uid).then((data) => {
+      // converts the object values to an array and filters based on the search term
       const result = Object.values(data).filter((obj) => obj.term.toLowerCase().includes(listener.trim()));
-      return result;
+      return result; // returns the filtered result
     })
       .then(showCards);
   };
+  // adds event listener tothe input field with the id "search"
   document.querySelector('#search').addEventListener('keyup', search);
 
   // Sort A to Z
   document.querySelector('#alphabet').addEventListener('click', () => {
+    // calls the sortAZ function and passes the users uid through a promise that resolves a sorted result. once resolved, the showCards function is called and passed to display the sorted cards on the DOM
     sortAZ(user.uid).then(showCards);
   });
 };

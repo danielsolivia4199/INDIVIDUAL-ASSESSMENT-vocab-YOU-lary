@@ -5,7 +5,7 @@ import timeStamp from '../utils/timeStamp';
 const formEvents = (user) => {
   document.querySelector('#main-container').addEventListener('submit', (e) => {
     e.preventDefault();
-    // CLICK EVENT for submiting form to add card
+    // Click event for submiting form to add card
     if (e.target.id.includes('submit-card')) {
       const payload = {
         term: document.querySelector('#term').value,
